@@ -6,7 +6,6 @@ import InputField from "../components/InputField";
 import LoadingPage from "./loading";
 import EndpointsPage from "./endpoints";
 import Transition from "../components/TransitionWrapper";
-// import SocialLinks from "../components/SocialLinks";
 
 const HomePage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -22,7 +21,6 @@ const HomePage: React.FC = () => {
 
   return (
     <Transition>
-      {/* <SocialLinks /> */}
       {loading ? (
         <LoadingPage />
       ) : uniqueKey ? (
