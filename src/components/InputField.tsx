@@ -19,12 +19,12 @@ const InputField: React.FC<InputFieldProps> = ({ onGenerate }) => {
     try {
       console.log("Inside Input Field - 1");
       const response = await axios.get(
-        "http://52.66.5.1:9999/api/generateUniqueKey"
+        "http://13.126.166.196:9999/api/generateUniqueKey"
       );
       console.log(primaryKey);
       const uniqueKey = response.data;
       console.log(uniqueKey);
-      await axios.post("http://52.66.5.1:9999/api/endpoint", {
+      await axios.post("http://13.126.166.196:9999/api/endpoint", {
         uniqueKey: uniqueKey,
         keyId: primaryKey || null,
       });
