@@ -1,9 +1,7 @@
-"use client";
 import React, { useState } from "react";
 import axios from "axios";
 import "./InputField.css";
 import ParticlesBackground from "./ParticlesBackground";
-import { styleText } from "util";
 
 interface InputFieldProps {
   onGenerate: (uniqueKey: string) => void;

@@ -1,8 +1,6 @@
-'use client'
-import React, { useState } from 'react';
-import EndpointDisplay from '../components/EndpointDisplay';
-import ConfirmDialog from '../components/ConfirmDialog';
-
+import React, { useState } from "react";
+import EndpointDisplay from "../components/EndpointDisplay";
+import ConfirmDialog from "../components/ConfirmDialog";
 interface EndpointsProps {
   uniqueKey: string;
 }
@@ -16,7 +14,7 @@ const EndpointsPage: React.FC<EndpointsProps> = ({ uniqueKey }) => {
 
   const confirmBack = () => {
     setShowConfirmDialog(false);
-    window.location.href = '/'; // Navigate to homepage
+    window.location.href = "/"; // Navigate to homepage
   };
 
   const cancelBack = () => {
@@ -26,7 +24,9 @@ const EndpointsPage: React.FC<EndpointsProps> = ({ uniqueKey }) => {
   return (
     <>
       <EndpointDisplay uniqueKey={uniqueKey} onBack={handleBack} />
-      {showConfirmDialog && <ConfirmDialog onConfirm={confirmBack} onCancel={cancelBack} />}
+      {showConfirmDialog && (
+        <ConfirmDialog onConfirm={confirmBack} onCancel={cancelBack} />
+      )}
     </>
   );
 };

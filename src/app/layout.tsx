@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ParticlesBackground from "@/components/ParticlesBackground";
 import PolkaDotBackground from "../components/PolkaDotBackground";
-import SocialLinks from "../components/SocialLinks";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SocialLinks />
         <PolkaDotBackground
           dotColor="rgba(0, 0, 0, 0.1)"
           backgroundColor="#f0f0f0"

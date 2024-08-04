@@ -1,8 +1,8 @@
-import React from 'react';
-import "./LoadingSpinner.css"
+import React from "react";
+import "./LoadingSpinner.css";
 
 const LoadingSpinner: React.FC = () => {
-    console.log("Inside Loading Spinner");
+  console.log("Inside Loading Spinner");
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div

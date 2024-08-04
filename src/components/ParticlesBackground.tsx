@@ -23,12 +23,6 @@ const ParticlesBackground = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        // background: {
-        //     image: "url('/homepage.webp')",
-        //     size: "cover",
-        //     repeat: "no-repeat",
-        //     position: "50% 50%",
-        // },
         fpsLimit: 60,
         interactivity: {
           events: {

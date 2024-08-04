@@ -1,4 +1,3 @@
-// app/page.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -6,6 +5,8 @@ import InputField from "../components/InputField";
 import LoadingPage from "./loading";
 import EndpointsPage from "./endpoints";
 import Transition from "../components/TransitionWrapper";
+import SocialLinks from "../components/SocialLinks";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const HomePage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -16,18 +17,19 @@ const HomePage: React.FC = () => {
     setTimeout(() => {
       setLoading(false);
       setUniqueKey(key);
-    }, 2000);
+    }, 800);
   };
 
   return (
     <Transition>
       {loading ? (
-        <LoadingPage />
+        <LoadingSpinner />
       ) : uniqueKey ? (
         <EndpointsPage uniqueKey={uniqueKey} />
       ) : (
         <InputField onGenerate={handleGenerate} />
       )}
+      <SocialLinks />
     </Transition>
   );
 };
