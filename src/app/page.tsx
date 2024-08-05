@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import InputField from "../components/InputField";
-import LoadingPage from "./loading";
 import EndpointsPage from "./endpoints";
 import Transition from "../components/TransitionWrapper";
 import SocialLinks from "../components/SocialLinks";
