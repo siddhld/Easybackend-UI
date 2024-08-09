@@ -15,8 +15,8 @@ const EndpointDisplay: React.FC<EndpointDisplayProps> = ({
   uniqueKey,
   onBack,
 }) => {
-  const baseUrl = "https://easybackend.com/api";
-  const url = `http://13.126.166.196:9999/api/${uniqueKey}`;
+  const baseUrl = "https://api.easybackend.in";
+  const url = `https://api.easybackend.in/${uniqueKey}`;
   const fullUrl = `${baseUrl}/${uniqueKey}`;
 
   const handleCopy = (url: string) => {
