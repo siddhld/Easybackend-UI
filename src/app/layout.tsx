@@ -20,8 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <PolkaDotBackground
-          dotColor="rgba(0, 0, 0, 0.1)"
-          backgroundColor="#f0f0f0"
+          dotColor="rgba(0, 0, 0, 0.2)"
+          backgroundColor="#ffffff"
           dotSize={1}
           dotSpacing={24}
         >
