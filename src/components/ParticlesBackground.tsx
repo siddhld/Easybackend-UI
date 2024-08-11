@@ -90,7 +90,7 @@ const ParticlesBackground = () => {
               enable: true,
               area: 1000,
             },
-            value: 80,
+            value: 60,
           },
           opacity: {
             value: 0.1,
@@ -99,7 +99,7 @@ const ParticlesBackground = () => {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 4 },
+            value: { min: 0.5, max: 3 },
           },
         },
         detectRetina: true,

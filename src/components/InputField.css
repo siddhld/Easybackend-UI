@@ -3,7 +3,9 @@
 }
 
 .h-img {
-  background-image: url('/homepage.png');
+  /* background-image: url('/homepage.png'); */
+  background-image: url('/text-back.png');
+  z-index: 100;
 }
 
 .wave-group .input {
