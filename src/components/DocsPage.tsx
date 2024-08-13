@@ -4,11 +4,13 @@ import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow, coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const DocsComponent = () => {
   const [text1, setText1] = useState("Copy");
   const [text2, setText2] = useState("Copy");
+  const router = useRouter();
 
   const exampleDocs = `{
     "id": "1",   // Default
@@ -93,6 +95,10 @@ const DocsComponent = () => {
     }
   };
 
+  const goBack = () => {
+    router.back();
+  };
+
   return (
     <div
       className={`bg-white text-gray-800`}
@@ -107,7 +113,7 @@ const DocsComponent = () => {
         <nav className="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:items-center md:items-center sm:items-center lg:justify-between md:justify-between sm:justify-between justify-start">
           <ul>
             <li className="font-mono text-xl">
-              <Link href="/">EasyBackend</Link>
+              <button onClick={goBack}>EasyBackend</button>
             </li>
           </ul>
           <ul id="header-nav" className={`mr-6 sm:flex md:flex lg:flex`}>
@@ -218,7 +224,7 @@ const DocsComponent = () => {
               </li>
 
               <Image
-                src="/Unique_ID_key_Name.png"
+                src="/Unique_ID_key_Name.webp"
                 alt="Unique Key Id Name"
                 width={300}
                 height={200}
@@ -272,7 +278,7 @@ const DocsComponent = () => {
                 "Generate" button to create a new unique API.
               </li>
               <Image
-                src="/Generate.png"
+                src="/Generate.webp"
                 alt="Generate button"
                 width={300}
                 height={200}
@@ -294,7 +300,7 @@ const DocsComponent = () => {
               </li>
 
               <Image
-                src="/APIs.png"
+                src="/APIs.webp"
                 alt="endpoints"
                 width={600}
                 height={400}
