@@ -4,13 +4,11 @@ import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { tomorrow, coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const DocsComponent = () => {
   const [text1, setText1] = useState("Copy");
   const [text2, setText2] = useState("Copy");
-  const router = useRouter();
 
   const exampleDocs = `{
     "id": "1",   // Default
@@ -95,10 +93,6 @@ const DocsComponent = () => {
     }
   };
 
-  const goBack = () => {
-    router.back();
-  };
-
   return (
     <div
       className={`bg-white text-gray-800`}
@@ -113,7 +107,7 @@ const DocsComponent = () => {
         <nav className="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:items-center md:items-center sm:items-center lg:justify-between md:justify-between sm:justify-between justify-start">
           <ul>
             <li className="font-mono text-xl">
-              <button onClick={goBack}>EasyBackend</button>
+              <Link href="/">EasyBackend</Link>
             </li>
           </ul>
           <ul id="header-nav" className={`mr-6 sm:flex md:flex lg:flex`}>
